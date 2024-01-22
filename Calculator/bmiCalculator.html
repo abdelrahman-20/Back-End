@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Calculator</title>
+		<title>BMI Calculator</title>
 		<style>
 			form {
 				width: 70%;
@@ -11,7 +11,7 @@
 				margin: 20px auto;
 				text-align: center;
 				border-radius: 10px;
-				background-color: tomato;
+				background-color: slateblue;
 			}
 			input {
 				width: 50%;
@@ -28,18 +28,18 @@
 				font-weight: bold;
 				border-radius: 10px;
 				background-color: white;
-				color: tomato;
+				color: slateblue;
 				border: none;
 			}
 		</style>
 	</head>
 	<body>
-		<form action="/" method="post">
-			<input type="text" name="number1" placeholder="First Number" />
-			<br />
-			<input type="text" name="number2" placeholder="Second Number" />
-			<br />
-			<button type="submit" name="submit">Calculate</button>
+		<center><h1>BMI Calculator</h1></center>
+
+		<form action="/bmicalculator" method="post">
+			<input type="text" name="weight" placeholder="Weight" />
+			<input type="text" name="height" placeholder="Height" />
+			<button type="submit">Calculate BMI</button>
 		</form>
 	</body>
 </html>
