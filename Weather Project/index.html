@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather Project</title>
+		<style>
+			form {
+				height: 500px;
+				padding-top: 100px;
+				border-radius: 10px;
+				background-color: slateblue;
+				text-align: center;
+			}
+			label,
+			input {
+				display: inline-block;
+			}
+			label {
+				color: white;
+				font-size: 30px;
+			}
+			input {
+				width: 300px;
+				height: 30px;
+				border-radius: 5px;
+				border: 3px solid blueviolet;
+			}
+			button {
+				width: 150px;
+				height: 50px;
+				color: white;
+				border-radius: 5px;
+				border: 4px solid white;
+				background-color: slateblue;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/" method="post">
+			<label for="cityName">City Name</label>
+			<br /><br />
+			<input type="text" name="cityName" id="cityName" />
+			<br /><br />
+			<button type="submit">Get Weather Data</button>
+		</form>
+	</body>
+</html>
