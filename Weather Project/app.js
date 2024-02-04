@@ -16,22 +16,26 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+	// Building Our API Request URL:
 	const units = "metric";
 	const query = req.body.cityName;
 	const apiKey = "40860f39ae1effa5268b2de0bee2c820";
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=${units}&appid=${apiKey}`;
 
+	// Getting Response From Our API Request URL:
 	https.get(url, (response) => {
 		console.log("---".repeat(10));
 		console.log(`Status Code: ${response.statusCode}`);
 
 		// Getting Weather Data As JSON String:
 		response.on("data", (data) => {
+			// Parsing "Tokenizing" The Response JSON File:
 			const weatherData = JSON.parse(data);
 			const temp = weatherData.main.temp;
 			const desc = weatherData.weather[0].description;
 			const image = "/Images/rainy-day.png";
 
+			// Sending The Response To Our Web Site:
 			res.send(
 				`<center><h1 style="height: 500px; background-color: slateblue; padding-top: 100px; border-radius: 10px;">
 			The Temp In ${query} is ${temp} Degree Celesius<br /><br />
