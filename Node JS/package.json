@@ -1,7 +1,7 @@
 {
 	"name": "node-js",
 	"version": "1.0.0",
-	"description": "This is an introduction to node-js project.",
+	"description": "Introduction To Node Project",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
