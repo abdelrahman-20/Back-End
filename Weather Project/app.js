@@ -11,10 +11,6 @@ app.get("/", (req, res) => {
 	res.sendFile(`${__dirname}/index.html`);
 });
 
-// const containerDiv = document.querySelector("#weather-info");
-// const headerEl = document.querySelector("#weather-info h1");
-// const imageEl = document.querySelector("#weather-info img");
-
 app.post("/", (req, res) => {
 	console.log("Post Recieved");
 
