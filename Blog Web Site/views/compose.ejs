@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs"); -%>
+
+<div id="article">
+	<h1>Compose</h1>
+	<form action="/compose" method="post">
+		<div class="form-group">
+			<label for="postTitle">Title</label><br />
+			<input
+				type="text"
+				name="postTitle"
+				id="postTitle"
+				class="form-control"
+			/>
+			<small class="form-text text-muted">
+				This Info Will Not Be Shared In Public
+			</small>
+		</div>
+		<div class="form-group">
+			<label for="postContent">Password</label>
+			<textarea type="text" class="form-control" id="postContent" name="postContent" placeholder="Type Here ..." cols="30" rows="5"></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+<%- include("partials/footer.ejs"); -%>
