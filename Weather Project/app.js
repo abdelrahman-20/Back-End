@@ -1,9 +1,8 @@
-const bodyParser = require("body-parser");
-const express = require("express");
-const https = require("https");
-
-const app = express();
 const port = 3000;
+const https = require("https");
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
