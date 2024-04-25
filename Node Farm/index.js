@@ -34,3 +34,14 @@ const fs = require("fs");
 // console.log("HELLO FROM JS FILE !!" + `\n`);
 
 // --------------------------------------------------------------
+// Creating A Web Server:
+
+const port = 3000;
+const http = require("http");
+
+http.createServer((req, res) => {
+	console.log(req);
+	res.end(`Hello From The Server side`);
+}).listen(port, "localhost", () => {
+	console.log(`Listening On Port: ${port}`);
+});
