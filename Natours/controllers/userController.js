@@ -1,5 +1,3 @@
-//! ---------------- User Controllers ---------------- ?//
-
 exports.getAllUsers = (req, res) => {
   res.status(500).json({
     status: "Error",
@@ -8,10 +6,21 @@ exports.getAllUsers = (req, res) => {
 };
 
 exports.getUser = (req, res) => {
-  res.status(500).json({
-    status: "Error",
-    message: "This Route Isn't Defined Yet",
-  });
+  const id = req.params.id * 1; // Convert String To Number
+
+  if (id < 1) {
+    res.status(500).json({
+      status: "Error",
+      message: "This Route Isn't Defined Yet",
+    });
+  } else {
+    res.status(200).json({
+      status: "Success",
+      data: {
+        id,
+      },
+    });
+  }
 };
 
 exports.createUsers = (req, res) => {
