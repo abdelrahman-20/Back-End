@@ -1,2 +1,8 @@
-./dev-data/img
-./public/img
+# Ignore image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
