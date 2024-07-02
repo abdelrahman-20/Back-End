@@ -1,5 +1,8 @@
 /node_modules
 
+# Ignore Configuration File
+*.env
+
 # Ignore image files
 *.png
 *.jpg
