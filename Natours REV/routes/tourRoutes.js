@@ -3,17 +3,14 @@ const tourRouter = express.Router();
 const tourControllers = require(`${__dirname}/../controllers/tourController`);
 
 // Adding MiddleWare To Check For ID:
-tourRouter.param("id", tourControllers.checkID);
+// tourRouter.param("id", tourControllers.checkID);
 
 // Handling Tour Routes:
 
 tourRouter
   .route("/")
   .get(tourControllers.getAllTours)
-  .post(
-    tourControllers.checkBody,
-    tourControllers.createTour
-  );
+  .post(tourControllers.createTour);
 
 tourRouter
   .route("/:id")
