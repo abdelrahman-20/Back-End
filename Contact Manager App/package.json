@@ -1,0 +1,11 @@
+{
+  "name": "contact-manager-app",
+  "version": "1.0.0",
+  "description": "This is Express.JS Project For Managing Contacts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdelrahman_Salem",
+  "license": "ISC"
+}
